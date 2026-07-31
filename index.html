@@ -12,7 +12,7 @@
   --band:        #DBDBE2;
   --fg:          #656565;
   --soft:        #656565;
-  --muted:       #909090;
+  --muted:       #737373;
   --ink:         #171717;
   --emerald:        #00B44B;
   --emerald-deep:   #00973C;
@@ -29,7 +29,7 @@
 }
 
 /* ── Body: JetBrains Mono everywhere except headers ── */
-body { background: var(--bg); color: var(--fg); font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace; }
+body { background: var(--bg); color: #515151; font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace; }
 body:before { background: var(--emerald); }
 
 /* ── Candlestick scroll indicator (custom, replaces the native scrollbar) ── */
@@ -97,9 +97,9 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
   border-bottom-color: var(--line) !important;
 }
 .nav { color: var(--muted); }
-.nav a:hover { color: var(--fg); }
+.nav a:hover { color: #515151; }
 .brand { color: var(--emerald) !important; }
-.nav-toggle { border-color: var(--line-strong); color: var(--fg); }
+.nav-toggle { border-color: var(--line-strong); color: #515151; }
 @media (max-width: 900px) {
   .nav { background: rgba(248,249,255,0.97) !important; border-color: var(--line) !important; }
   .nav a { border-bottom-color: var(--line) !important; }
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 .hero-chart-axis-label {
   font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
   font-size: 11px;
-  fill: var(--fg);
+  fill: #515151;
   opacity: 0.75;
 }
 .hero-chart-line {
@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 }
 .hero h1 { color: #343434 !important; 
           line-height: 1.5em;}
-.hero .lead { color: var(--fg) !important; }
+.hero .lead { color: #515151 !important; }
 
 /* ── Banner ── */
 .banner { border-color: var(--line) !important; }
@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 }
 .banner-bg:after { background-image: linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px) !important; }
 .banner-title { color: #343434 !important; }
-.banner .lead, .banner-p { color: var(--fg) !important; }
+.banner .lead, .banner-p { color: #515151 !important; }
 .banner-p strong { color: #343434 !important; }
 
 /* ── Cards / tracks / tiles ── */
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
   border-color: var(--emerald) !important;
   box-shadow: 0 10px 28px rgba(0,180,75,0.15) !important;
 }
-.track p, .card p, .track-blurb { color: var(--fg) !important; }
+.track p, .card p, .track-blurb { color: #515151 !important; }
 .track .bar, .prize .bar { border-radius: 8px 8px 0 0 !important; }
 
 /* ── Path route stepper ── */
@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 /* ── FAQ ── */
 .faq details { background: var(--soft) !important; }
 .faq details[open] summary, .faq summary:after { color: var(--emerald) !important; }
-.faq .ans { color: var(--fg) !important; }
+.faq .ans { color: #515151 !important; }
 
 /* ── Figure ── */
 .figure {
@@ -303,12 +303,12 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 /* ── Partners ── */
 .partner { background: var(--surface) !important; }
 .partner:hover { background: var(--surface-2) !important; }
-.partner .pname { color: var(--fg) !important; }
-.partner.big .pname { color: var(--fg) !important; }
+.partner .pname { color: #515151 !important; }
+.partner.big .pname { color: #515151 !important; }
 
 /* ── CTA band ── */
 .cta-band { background: var(--surface-2) !important; border-color: var(--green-line) !important; }
-.cta-band p { color: var(--fg) !important; }
+.cta-band p { color: #515151 !important; }
 
 /* ── Funnel ── */
 .funnel-dest {
@@ -318,15 +318,15 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 }
 .funnel-dest h3 { color: #343434 !important; }
 .funnel-dest .kind { color: var(--emerald) !important; }
-.funnel-dest .dest-sub, .funnel-dest p { color: var(--fg) !important; }
+.funnel-dest .dest-sub, .funnel-dest p { color: #515151 !important; }
 .funnel-join:before { background: var(--emerald) !important; }
 .dest-col { background: linear-gradient(180deg, color-mix(in srgb, var(--c) 8%, transparent), transparent 55%) !important; }
-.dest-col p { color: var(--fg) !important; }
+.dest-col p { color: #515151 !important; }
 
 /* ── Scoring ── */
 .score-ghead .gnum { background: var(--emerald) !important; color: #fff !important; }
 .score-row .si span { color: var(--muted) !important; }
-.score-formula { color: var(--fg) !important; }
+.score-formula { color: #515151 !important; }
 .score-formula span { color: var(--emerald) !important; }
 
 /* ── Rule list: ticker board ── */
@@ -446,18 +446,18 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
   .rule-marquee-track { animation: none; }
   .rule-board-live { animation: none; }
 }
-.rule-note { color: var(--fg) !important; }
+.rule-note { color: #515151 !important; }
 .rule-note strong { color: var(--emerald) !important; }
 
 /* ── Prize hero ── */
 .prizehero-lbl { color: var(--emerald) !important; }
-.prizehero-finale { color: var(--fg) !important; }
+.prizehero-finale { color: #515151 !important; }
 .prizehero-finale strong { color: #343434 !important; }
 .prizehero-amt { color: var(--emerald) !important; text-shadow: 0 6px 40px rgba(0,180,75,0.2) !important;
 padding-top:1rem; }
 
 /* ── Buttons ── */
-.btn { border-color: var(--line-strong) !important; color: var(--fg) !important; font-weight: 600; }
+.btn { border-color: var(--line-strong) !important; color: #515151 !important; font-weight: 600; }
 .btn:hover { background: var(--fg) !important; color: var(--bg) !important; }
 .btn.solid { background: var(--emerald) !important; border-color: var(--emerald) !important; color: #fff !important; }
 .btn.solid:hover { background: var(--emerald-deep) !important; border-color: var(--emerald-deep) !important; }
@@ -485,15 +485,15 @@ footer { background: var(--bg); }
 .foot { border-top-color: var(--line) !important; }
 .foot-brand p { color: var(--muted) !important; }
 .foot-col a { color: var(--muted) !important; }
-.foot-col a:hover { color: var(--fg) !important; }
+.foot-col a:hover { color: #515151 !important; }
 .foot-copy { color: var(--line-strong) !important; }
 
 /* ── Article text ── */
-.article :is(p, li) { color: var(--soft) !important; }
+.article :is(p, li) { color: #515151 !important; }
 
 /* ── Misc text overrides ── */
-.lead { color: var(--fg) !important; }
-.dir .route { color: var(--fg) !important; }
+.lead { color: #515151 !important; }
+.dir .route { color: #515151 !important; }
 .leg .when { color: var(--muted) !important; }
 
 /* ── Mobile ── */
