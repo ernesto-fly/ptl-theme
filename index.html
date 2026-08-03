@@ -44,7 +44,15 @@
 }
 
 /* ── Body: Inter everywhere except the dark ticker/board components ── */
-body { background: var(--bg); color: #515151; font-family: 'Inter', system-ui, sans-serif; }
+body {
+  background-color: var(--bg);
+  background-image: radial-gradient(140% 120% at 50% -10%, rgba(3,220,93,0.15), transparent 45%);
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: #515151; font-family: 'Inter', system-ui, sans-serif;
+}
 body:before { background: var(--emerald); }
 
 /* ── Green hover on all clickable links ── */
