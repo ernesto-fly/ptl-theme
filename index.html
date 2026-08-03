@@ -636,6 +636,15 @@ footer { background: var(--bg); font-family: 'Inter', system-ui, sans-serif; }
   main > .section.wrap { padding-inline: 20px !important; }
   .wrap { padding-inline: 20px; }
 }
+
+/* ── Disable scroll-snap on mobile so it scrolls normally/smoothly ── */
+@media (max-width: 768px) {
+  html { scroll-snap-type: none !important; }
+  .hero, .banner, main > .section.wrap, footer {
+    scroll-snap-align: none !important;
+    min-height: auto !important;
+  }
+}
 </style></head> <body> <div id="candleScroll" aria-hidden="true"><div class="cs-track"></div><div class="cs-thumb"></div></div> <header class="site-head"> <div class="wrap head-row"> <a class="brand" href="/" aria-label="Premier Trading League home"><img class="brand-logo" src="images/ptl-tradeify-logo.svg" alt="PTL x Tradeify" width="158" height="65"></a> <div class="nav-right"> <nav class="nav" id="nav"> <a href="/what-is-ptl">What is PTL</a><a href="/play">Play</a><a href="/schedule">Schedule</a><a href="/creators">Creators</a><a href="/tickets">Tickets</a><a href="/watch">Watch</a><a href="/news">News</a> </nav> <a class="nav-shop" href="#">Shop</a> <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button> </div> </div> </header> <script type="module">const t=document.getElementById("nav-toggle"),n=document.getElementById("nav");t?.addEventListener("click",()=>{const e=n?.classList.toggle("open");t.setAttribute("aria-expanded",String(!!e))});</script> <script type="module">(function(){var h=document.querySelector('.site-head');function setH(){if(h)document.documentElement.style.setProperty('--header-h',h.offsetHeight+'px')}setH();window.addEventListener('resize',setH);if(window.ResizeObserver&&h){new ResizeObserver(setH).observe(h)}})();</script> <script type="module">(function(){var svg=document.querySelector('.hero-chart');if(!svg)return;function setPAR(){svg.setAttribute('preserveAspectRatio',window.innerWidth<=640?'xMidYMid slice':'none')}setPAR();window.addEventListener('resize',setPAR)})();</script> <script type="module">(function(){
   var track = document.querySelector('#candleScroll .cs-track');
   var thumb = document.querySelector('#candleScroll .cs-thumb');
