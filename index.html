@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
   letter-spacing: -0.01em !important;
   font-variant-numeric: lining-nums tabular-nums !important;
 }
-.hero-bg { background: #d4e4f7 !important; overflow: hidden; }
+.hero-bg { background: transparent !important; overflow: hidden; }
 .hero-chart { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .hero-chart-grid { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 3 7; opacity: 0.3; }
 .hero-chart-axis-label {
@@ -237,13 +237,8 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 .banner-p { margin: 0 0 16px !important; }
 .prizehero-lbl { margin-top: 20px !important; }
 .prizehero-finale { margin-top: 24px !important; }
-.banner-bg {
-  background-color: var(--green) !important;
-  background-image:
-    radial-gradient(140% 120% at 50% -10%, rgba(3,220,93,0.12), transparent 42%),
-    radial-gradient(120% 100% at 50% 0%, #edfff6, var(--green) 52%, var(--bg)) !important;
-}
-.banner-bg:after { background-image: linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px) !important; }
+.banner-bg { background: transparent !important; }
+.banner-bg:after { background-image: none !important; }
 .banner-title { color: #343434 !important; }
 .banner .lead, .banner-p { color: #515151 !important; font-family: 'Inter', system-ui, sans-serif; }
 .banner-p strong { color: #343434 !important; }
@@ -575,9 +570,8 @@ padding: 1.5rem 0; }
 .nav-shop { border-color: #D1BA6F !important; color: #D1BA6F !important; font-weight: 800 !important; box-shadow: none !important; transition: box-shadow 0.25s ease, background 0.2s ease, color 0.2s ease; }
 .nav-shop:hover { background: #D1BA6F !important; color: var(--bg) !important; box-shadow: 0 0 16px rgba(209,186,111,0.7), 0 0 32px rgba(209,186,111,0.4) !important; }
 
-/* ── Alternating section bands ── */
-.band-green:before { background: var(--green) !important; }
-.band-alt:before, main > .section.wrap:nth-of-type(2n):before { background: var(--band) !important; }
+/* ── Section bands: disabled so every section shows the same body background ── */
+main > .section.wrap:before { background: transparent !important; }
 
 /* ── Countdown ── */
 .cd-num, .cd-num[data-astro-cid-rice64zl] { color: #D1BA6F !important; text-shadow: 0 0 8px rgba(209,186,111,0.35), 0 0 16px rgba(209,186,111,0.15) !important; }
