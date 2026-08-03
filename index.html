@@ -14,10 +14,10 @@
   --soft:        #656565;
   --muted:       #737373;
   --ink:         #171717;
-  --emerald:        #00B44B;
-  --emerald-deep:   #00973C;
-  --lan:         #00B44B;
-  --l1:          #00B44B;
+  --emerald:        #03DC5D;
+  --emerald-deep:   #02B44C;
+  --lan:         #03DC5D;
+  --l1:          #03DC5D;
   --l2:          #B94A00;
   --neg:         #B94A00;
   --ptlc:        #CFE8FF;
@@ -26,6 +26,21 @@
   --green:       #D9F5E8;
   --green-line:  #BBDACB;
   --font: 'Roboto Mono', 'Courier New', monospace;
+}
+
+@font-face {
+  font-family: 'Mona Sans Expanded';
+  src: url('https://cdn.jsdelivr.net/gh/github/mona-sans@main/fonts/webfonts/variable/MonaSansVF-Expanded%5Bopsz%2Cwght%2Cital%5D.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('https://cdn.jsdelivr.net/gh/github/mona-sans@main/fonts/webfonts/variable/MonaSansVF%5Bopsz%2Cwght%5D.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* ── Body: Inter everywhere except the dark ticker/board components ── */
@@ -81,20 +96,40 @@ html { scroll-padding-top: var(--header-h); }
 main > .section.wrap { padding-block: clamp(24px, 4vw, 56px) !important; }
 footer { scroll-snap-align: start; }
 
-/* ── Inter for headers only ── */
+/* ── Mona Sans for headers only ── */
 h1, h2, h3, h4, h5, h6, .banner-title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Mona Sans', 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  leading-trim: none;
+  letter-spacing: -0.01em !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
 }
 
 .cd-num, .prizehero-amt, .rt-chg, .sp, .gnum,
 .hero-chart-tag, .hero-chart-axis-label {
-  font-variant-numeric: tabular-nums;
-  font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
+  font-family: 'JetBrains Mono', 'Mona Sans Expanded', 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  leading-trim: none;
+  line-height: 64px !important;
+  font-variant-numeric: lining-nums tabular-nums slashed-zero !important;
+  font-feature-settings: "zero" 1 !important;
 }
 
 /* ── Headings ── */
 h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
-.eyebrow { color: var(--gold-deep) !important; }
+.eyebrow {
+  color: var(--gold-deep) !important;
+  font-family: 'Mona Sans', 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  font-size: 20px !important;
+  leading-trim: none;
+  line-height: 26px !important;
+  letter-spacing: -0.01em !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+}
 
 /* ── Site header ── */
 .site-head {
@@ -112,7 +147,17 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 
 /* ── Hero ── */
 .hero { border-bottom-color: var(--line) !important; }
-.hero-meta { color: var(--gold) !important; }
+.hero-meta {
+  color: var(--gold) !important;
+  font-family: 'Mona Sans', 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  font-size: 20px !important;
+  leading-trim: none;
+  line-height: 26px !important;
+  letter-spacing: -0.01em !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+}
 .hero-bg { background: #d4e4f7 !important; overflow: hidden; }
 .hero-chart { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .hero-chart-grid { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 3 7; opacity: 0.3; }
@@ -173,10 +218,21 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 
 /* ── Banner ── */
 .banner { border-color: var(--line) !important; }
+.banner .wrap { text-align: left; }
+.banner .btn-row { justify-content: flex-start; margin-top: 40px !important; }
+.prizehero { text-align: left; margin-top: 12px; }
+
+/* ── More breathing room from the eyebrow down to the Buy In button ── */
+.banner .eyebrow { margin-bottom: 16px; }
+.banner-title { margin: 0 0 32px !important; }
+.banner .lead { margin: 0 0 28px !important; }
+.banner-p { margin: 0 0 16px !important; }
+.prizehero-lbl { margin-top: 20px !important; }
+.prizehero-finale { margin-top: 24px !important; }
 .banner-bg {
   background-color: var(--green) !important;
   background-image:
-    radial-gradient(140% 120% at 50% -10%, rgba(0,180,75,0.12), transparent 42%),
+    radial-gradient(140% 120% at 50% -10%, rgba(3,220,93,0.12), transparent 42%),
     radial-gradient(120% 100% at 50% 0%, #edfff6, var(--green) 52%, var(--bg)) !important;
 }
 .banner-bg:after { background-image: linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px) !important; }
@@ -193,7 +249,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 .track:hover, .card:hover, .tier:hover, .prize:hover, a.partner:hover, .funnel .source:hover {
   transform: translateY(-4px);
   border-color: var(--emerald) !important;
-  box-shadow: 0 10px 28px rgba(0,180,75,0.15) !important;
+  box-shadow: 0 10px 28px rgba(3,220,93,0.15) !important;
 }
 .track p, .card p, .track-blurb { color: #515151 !important; }
 .track .bar, .prize .bar { border-radius: 8px 8px 0 0 !important; }
@@ -291,6 +347,10 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 .faq details[open] summary, .faq summary:after { color: var(--emerald) !important; }
 .faq .ans { color: #515151 !important; }
 
+/* ── Finale section spacing ── */
+.split { gap: clamp(40px, 6vw, 80px) !important; }
+.split + .cta-band { margin-top: clamp(56px, 8vw, 96px) !important; }
+
 /* ── Figure ── */
 .figure {
   background: var(--soft) !important;
@@ -317,8 +377,8 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 
 /* ── Funnel ── */
 .funnel-dest {
-  border-color: rgba(0,180,75,0.35) !important;
-  background: radial-gradient(120% 95% at 50% -12%, rgba(0,180,75,0.12), transparent 55%),
+  border-color: rgba(3,220,93,0.35) !important;
+  background: radial-gradient(120% 95% at 50% -12%, rgba(3,220,93,0.12), transparent 55%),
               linear-gradient(180deg, #e0faf0, var(--green) 58%) !important;
 }
 .funnel-dest h3 { color: #343434 !important; }
@@ -358,9 +418,9 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
   animation: rule-board-pulse 1.6s infinite;
 }
 @keyframes rule-board-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(0,180,75,0.55); }
-  70% { box-shadow: 0 0 0 7px rgba(0,180,75,0); }
-  100% { box-shadow: 0 0 0 0 rgba(0,180,75,0); }
+  0% { box-shadow: 0 0 0 0 rgba(3,220,93,0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(3,220,93,0); }
+  100% { box-shadow: 0 0 0 0 rgba(3,220,93,0); }
 }
 .rule-board-title {
   color: #7a7f88;
@@ -394,7 +454,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 .rule-ticker:last-child { border-bottom: none; }
 .rule-ticker:hover { background: rgba(255,255,255,0.04); }
 .rule-ticker:hover .rt-sym { border-color: var(--emerald); color: #fff; }
-.rule-ticker:hover .rt-candles { filter: drop-shadow(0 0 5px rgba(0,180,75,0.45)); }
+.rule-ticker:hover .rt-candles { filter: drop-shadow(0 0 5px rgba(3,220,93,0.45)); }
 .rule-ticker:hover .rt-chg { transform: translateX(-2px); }
 .rt-sym {
   flex: 0 0 auto;
@@ -471,7 +531,7 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 .pt-row {
   white-space: nowrap; width: max-content;
   font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
-  font-weight: 600; font-variant-numeric: tabular-nums;
+  font-weight: 600; font-variant-numeric: lining-nums tabular-nums slashed-zero; font-feature-settings: "zero" 1;
   font-size: clamp(1rem, 2.6vw, 1.6rem); letter-spacing: 0.03em;
   animation: pt-scroll linear infinite;
 }
@@ -494,25 +554,25 @@ h1, h2, h3, h4, h5, h6 { color: #343434; text-transform: uppercase; }
 .prizehero-lbl { color: var(--emerald) !important; }
 .prizehero-finale { color: #515151 !important; }
 .prizehero-finale strong { color: #343434 !important; }
-.prizehero-amt { color: var(--emerald) !important; text-shadow: 0 6px 40px rgba(0,180,75,0.2) !important;
-padding-top:1rem; }
+.prizehero-amt { color: #D1BA6F !important; text-shadow: 0 0 18px rgba(209,186,111,0.55), 0 0 36px rgba(209,186,111,0.3) !important;
+padding: 1.5rem 0; }
 
 /* ── Buttons ── */
 .btn { border-color: var(--line-strong) !important; color: #515151 !important; font-weight: 800 !important; }
 .btn:hover { background: var(--fg) !important; color: var(--bg) !important; }
-.btn.solid { background: var(--emerald) !important; border-color: var(--emerald) !important; color: #fff !important; }
-.btn.solid:hover { background: var(--emerald-deep) !important; border-color: var(--emerald-deep) !important; }
+.btn.solid { background: var(--emerald-deep) !important; border-color: var(--emerald-deep) !important; color: #fff !important; }
+.btn.solid:hover { background: var(--emerald) !important; border-color: var(--emerald) !important; }
 .btn.gold { border-color: var(--emerald) !important; color: var(--emerald) !important; }
 .btn.gold:hover { background: var(--emerald) !important; color: #fff !important; }
-.nav-shop { border-color: var(--emerald) !important; color: var(--emerald) !important; font-weight: 800 !important; }
-.nav-shop:hover { background: var(--emerald) !important; color: #fff !important; }
+.nav-shop { border-color: #D1BA6F !important; color: #D1BA6F !important; font-weight: 800 !important; box-shadow: none !important; transition: box-shadow 0.25s ease, background 0.2s ease, color 0.2s ease; }
+.nav-shop:hover { background: #D1BA6F !important; color: var(--bg) !important; box-shadow: 0 0 16px rgba(209,186,111,0.7), 0 0 32px rgba(209,186,111,0.4) !important; }
 
 /* ── Alternating section bands ── */
 .band-green:before { background: var(--green) !important; }
 .band-alt:before, main > .section.wrap:nth-of-type(2n):before { background: var(--band) !important; }
 
 /* ── Countdown ── */
-.cd-num { color: var(--emerald) !important; }
+.cd-num, .cd-num[data-astro-cid-rice64zl] { color: #D1BA6F !important; text-shadow: 0 0 18px rgba(209,186,111,0.55), 0 0 36px rgba(209,186,111,0.3) !important; }
 
 /* ── Gantt ── */
 .gantt { background: linear-gradient(180deg, var(--soft), var(--surface-2)) !important; border-color: var(--line) !important; }
